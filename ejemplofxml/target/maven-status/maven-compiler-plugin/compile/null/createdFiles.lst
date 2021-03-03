@@ -1,0 +1,6 @@
+com/sanvalero/ejemplofxml/util/R.class
+com/sanvalero/ejemplofxml/App.class
+com/sanvalero/ejemplofxml/domain/Coche.class
+com/sanvalero/ejemplofxml/AppController.class
+com/sanvalero/ejemplofxml/CocheDAO.class
+com/sanvalero/ejemplofxml/tasks/LoadTask.class

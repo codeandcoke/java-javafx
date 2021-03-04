@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="618.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+              <MenuItem fx:id="miImportar" mnemonicParsing="false" onAction="#importar" text="Import…" />
+              <MenuItem fx:id="miExportar" mnemonicParsing="false" onAction="#exportar" text="Export…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="412.0" prefWidth="667.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Label layoutX="35.0" layoutY="39.0" text="Matricula" />
+            <Label layoutX="35.0" layoutY="76.0" text="Marca" />
+            <Label layoutX="35.0" layoutY="118.0" text="Modelo" />
+            <Label layoutX="35.0" layoutY="160.0" text="Tipo" />
+            <TextField fx:id="tfMatricula" layoutX="127.0" layoutY="34.0" />
+            <TextField fx:id="tfMarca" layoutX="127.0" layoutY="71.0" />
+            <TextField fx:id="tfModelo" layoutX="127.0" layoutY="113.0" />
+            <Button fx:id="btNuevo" layoutX="68.0" layoutY="226.0" mnemonicParsing="false" onAction="#nuevoCoche" text="Nuevo" />
+            <Button fx:id="btGuardar" layoutX="133.0" layoutY="226.0" mnemonicParsing="false" onAction="#guardarCoche" text="Guardar" />
+            <Button fx:id="btEliminar" layoutX="379.0" layoutY="227.0" mnemonicParsing="false" onAction="#eliminarCoche" text="Eliminar" />
+            <Button fx:id="btModificar" layoutX="294.0" layoutY="227.0" mnemonicParsing="false" onAction="#modificarCoche" text="Modificar" />
+            <ComboBox fx:id="cbTipo" layoutX="127.0" layoutY="155.0" prefHeight="27.0" prefWidth="167.0" />
+            <Button fx:id="btCancelar" layoutX="211.0" layoutY="226.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+            <TableView fx:id="tvCoches" layoutX="27.0" layoutY="299.0" onMouseClicked="#seleccionarCoche" prefHeight="264.0" prefWidth="585.0" />
+            <Label fx:id="lbEstado" layoutX="26.0" layoutY="567.0" prefHeight="17.0" prefWidth="585.0" text="Coches v5" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
